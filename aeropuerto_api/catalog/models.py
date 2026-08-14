@@ -21,7 +21,7 @@ class Estado(models.TextChoices):
 
 
 class Flights(models.Model):
-    gate = models.ForeignKey(Gates, on_delete=models.PROTECT, related_name="gates")
+    gate = models.ForeignKey(Gates, on_delete=models.PROTECT, related_name="gate")
     flight_number = models.CharField(max_length=20)
     destination = models.CharField(max_length=100)
     status = models.CharField(

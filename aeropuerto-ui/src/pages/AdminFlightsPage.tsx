@@ -63,6 +63,7 @@ export default function AdminFlightsPage() {
 
      const payload = {
        gate: Number(gate),
+       flight_number:flight_number.trim(),
        destination:destination.trim(),
        status: status,
        departure_time: departure_time.trim(),
@@ -132,7 +133,7 @@ export default function AdminFlightsPage() {
              >
                {gates.map((m) => (
                  <MenuItem key={m.id} value={m.id}>
-                   {m.code} (#{m.id})
+                   {m.id} (#{m.id})
                  </MenuItem>
                ))}
              </Select>

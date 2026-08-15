@@ -37,14 +37,14 @@ export default function AdminGatesPage() {
  const save = async () => {
    try {
      setError("");
-     if (!code.trim()) return setError("El nombre es requerido");
+     if (!code.trim()) return setError("El codigo es requerido");
 
 
      const payload = {
        code: code.trim(),
-       terminal: terminal,
+       terminal: terminal.trim(),
        is_available: is_available,
-       created_at:created_at
+       created_at:created_at.trim()
      };
 
 
